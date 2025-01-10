@@ -1,0 +1,25 @@
+module top(
+    input wire clk,             // 50 MHz clock
+    input wire rst,             // Reset signal
+    input wire rx,              // UART receive line
+    output wire led             // LED output
+);
+
+    wire [7:0] received_data;
+    wire data_valid;
+
+    uart_rx uart_rx_inst(
+        .clk(clk),
+        .rst(rst),
+        .rx(rx),
+        .data_out(received_data),
+        .data_valid(data_valid)
+    );
+
+    led_display led_display_inst(
+        .data_in(received_data),
+        .data_valid(data_valid),
+        .led(led)
+    );
+
+endmodule

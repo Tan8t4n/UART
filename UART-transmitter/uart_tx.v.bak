@@ -1,0 +1,55 @@
+module uart_tx(
+    input wire clk,
+    input wire rst,
+    input wire tx_start,
+    input wire [7:0] tx_data,
+    output reg tx_busy,
+    output reg tx_out
+);
+
+    parameter CLK_FREQ = 50000000;
+    parameter BAUD_RATE = 9600;
+    parameter BAUD_PERIOD = CLK_FREQ / BAUD_RATE;
+
+    reg [15:0] clk_count = 0;
+    reg [3:0] bit_count = 0;
+    reg [9:0] shift_reg;
+    reg tx_running = 0;
+
+    always @(posedge clk or posedge rst) begin
+        if (rst) begin
+            tx_out <= 1;
+            tx_busy <= 0;
+            clk_count <= 0;
+            bit_count <= 0;
+            tx_running <= 0;
+        end else begin
+            if (tx_start && !tx_running) begin
+                tx_busy <= 1;
+                tx_running <= 1;
+                shift_reg <= {1'b1, tx_data, 1'b0};  // Start bit, data, stop bit
+                bit_count <= 0;
+                clk_count <= 0;
+            end
+
+            if (tx_running) begin
+                if (clk_count < BAUD_PERIOD - 1) begin
+                    clk_count <= clk_count + 1;
+                end else begin
+                    clk_count <= 0;
+                    tx_out <= shift_reg[0];
+                    shift_reg <= {1'b1, shift_reg[9:1]};
+                    if (bit_count < 9) begin
+                        bit_count <= bit_count + 1;
+                    end else begin
+                        bit_count <= 0;
+                        tx_running <= 0;
+                        tx_busy <= 0;
+                        tx_out <= 1;
+                    end
+                end
+            end
+        end
+    end
+
+endmodule

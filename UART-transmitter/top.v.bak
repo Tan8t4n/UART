@@ -1,0 +1,28 @@
+module top(
+    input wire clk,
+    input wire rst,
+    input wire [3:0] switches,
+    output wire uart_tx
+);
+
+    wire [7:0] tx_data;
+    wire tx_start;
+    wire tx_busy;
+
+    switch_encoder switch_enc(
+        .switches(switches),
+        .ascii_data(tx_data)
+    );
+
+    uart_tx uart_transmitter(
+        .clk(clk),
+        .rst(rst),
+        .tx_start(tx_start),
+        .tx_data(tx_data),
+        .tx_busy(tx_busy),
+        .tx_out(uart_tx)
+    );
+
+    assign tx_start = !tx_busy;  // Start transmission if UART is not busy
+
+endmodule

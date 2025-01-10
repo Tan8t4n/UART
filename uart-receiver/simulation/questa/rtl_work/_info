@@ -1,0 +1,145 @@
+m255
+K4
+z2
+!s12c _opt
+Z0 !s99 nomlopt
+!s11f vlog 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dF:/uart-receiver/simulation/questa
+T_opt
+Z2 !s110 1724396855
+VKkQQe==M=VRhFGDAHA<?=1
+04 6 4 work tb_top fast 0
+=1-60189548d8de-66c83537-168-2684
+R0
+!s12b OEM100
+!s124 OEM10U2 
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work +acc
+Z3 tCvgOpt 0
+n@_opt
+OL;O;2023.3;77
+vascii_to_7_segment
+2F:/uart-receiver/ascii_to_7_segment.v
+R2
+!i10b 1
+!s100 Rm7GUng?Fbh`8ThkL7i6T0
+I6oDZlnJTzDn3QAGd5QZQI1
+R1
+w1724143502
+8F:/uart-receiver/ascii_to_7_segment.v
+FF:/uart-receiver/ascii_to_7_segment.v
+!i122 3
+L0 1 30
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OL;L;2023.3;77
+r1
+!s85 0
+31
+Z6 !s108 1724396855.000000
+!s107 F:/uart-receiver/ascii_to_7_segment.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/uart-receiver|F:/uart-receiver/ascii_to_7_segment.v|
+!i113 0
+Z7 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z8 !s92 -vlog01compat -work work +incdir+F:/uart-receiver -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R3
+vled_display
+2F:/uart-receiver/led_display.v
+Z9 !s110 1724396854
+!i10b 1
+!s100 10A7Wi6JHekj18e@z_SK_2
+ICfRBmHY[5HSdQzHf?6Rbc2
+R1
+w1724142096
+8F:/uart-receiver/led_display.v
+FF:/uart-receiver/led_display.v
+!i122 0
+L0 1 18
+R4
+R5
+r1
+!s85 0
+31
+Z10 !s108 1724396854.000000
+!s107 F:/uart-receiver/led_display.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/uart-receiver|F:/uart-receiver/led_display.v|
+!i113 0
+R7
+R8
+R3
+vtb_top
+2F:/uart-receiver/tb_top.v
+R2
+!i10b 1
+!s100 B;GbbXoJUoM3[^;^QlB<j3
+IVh5CcfX21UDg]7jH2[0L_0
+R1
+w1723799515
+8F:/uart-receiver/tb_top.v
+FF:/uart-receiver/tb_top.v
+!i122 4
+L0 3 79
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 F:/uart-receiver/tb_top.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/uart-receiver|F:/uart-receiver/tb_top.v|
+!i113 0
+R7
+R8
+R3
+vtop
+2F:/uart-receiver/top.v
+R9
+!i10b 1
+!s100 fglZN@YWDBR82P5J32OU01
+IJ52mIjzN2?TCUl3Reh;0Q0
+R1
+w1724144596
+8F:/uart-receiver/top.v
+FF:/uart-receiver/top.v
+!i122 2
+L0 1 37
+R4
+R5
+r1
+!s85 0
+31
+R10
+!s107 F:/uart-receiver/top.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/uart-receiver|F:/uart-receiver/top.v|
+!i113 0
+R7
+R8
+R3
+vuart_rx
+2F:/uart-receiver/uart_rx.v
+R9
+!i10b 1
+!s100 NT]^Iz79CG[[EE?^9_:O`0
+IOW<j;l@E@g7bC:cdEKMUj0
+R1
+w1724141897
+8F:/uart-receiver/uart_rx.v
+FF:/uart-receiver/uart_rx.v
+!i122 1
+L0 1 100
+R4
+R5
+r1
+!s85 0
+31
+R10
+!s107 F:/uart-receiver/uart_rx.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/uart-receiver|F:/uart-receiver/uart_rx.v|
+!i113 0
+R7
+R8
+R3

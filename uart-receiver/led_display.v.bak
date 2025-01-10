@@ -1,0 +1,10 @@
+module led_display(
+    input wire [7:0] data_in,   // 8-bit input data (ASCII character)
+    input wire data_valid,      // Data valid signal
+    output reg led              // LED output
+);
+
+    always @(posedge data_valid) begin
+        led <= data_in[0];  // Display the LSB of the ASCII character on LED
+    end
+endmodule

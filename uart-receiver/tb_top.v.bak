@@ -1,0 +1,43 @@
+module tb_top;
+
+    reg clk;
+    reg rst;
+    reg rx;
+    wire led;
+
+    // Clock generation
+    always #10 clk = ~clk;  // 50 MHz clock
+
+    top uut (
+        .clk(clk),
+        .rst(rst),
+        .rx(rx),
+        .led(led)
+    );
+
+    initial begin
+        // Initialize signals
+        clk = 0;
+        rst = 1;
+        rx = 1;
+        #100 rst = 0;
+
+        // Transmit ASCII 'A' (0x41) = 01000001 over UART
+        #104160 rx = 0;  // Start bit
+        #104160 rx = 1;  // Bit 0 (LSB)
+        #104160 rx = 0;  // Bit 1
+        #104160 rx = 0;  // Bit 2
+        #104160 rx = 0;  // Bit 3
+        #104160 rx = 0;  // Bit 4
+        #104160 rx = 1;  // Bit 5
+        #104160 rx = 0;  // Bit 6
+        #104160 rx = 0;  // Bit 7 (MSB)
+        #104160 rx = 1;  // Stop bit
+
+        // Wait some time to observe the LED output
+        #100000;
+
+        // End simulation
+        $stop;
+    end
+endmodule

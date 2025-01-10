@@ -1,0 +1,97 @@
+m255
+K4
+z2
+!s12c _opt
+Z0 !s99 nomlopt
+!s11f vlog 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dF:/UART-transmitter/simulation/questa
+T_opt
+Z2 !s110 1724396691
+VzKcToZSTzH7<S;Mz35YO=3
+04 6 4 work tb_top fast 0
+=1-60189548d8de-66c83493-240-4348
+R0
+!s12b OEM100
+!s124 OEM10U3 
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work +acc
+Z3 tCvgOpt 0
+n@_opt
+OL;O;2023.3;77
+vtb_top
+2F:/UART-transmitter/tb_top.v
+R2
+!i10b 1
+!s100 OanU;5L^^gzAG`f^7hDAD1
+IbYedo;F1zzIoL4P_?XIcO3
+R1
+w1724396078
+8F:/UART-transmitter/tb_top.v
+FF:/UART-transmitter/tb_top.v
+!i122 2
+L0 1 41
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OL;L;2023.3;77
+r1
+!s85 0
+31
+Z6 !s108 1724396691.000000
+!s107 F:/UART-transmitter/tb_top.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/UART-transmitter|F:/UART-transmitter/tb_top.v|
+!i113 0
+Z7 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z8 !s92 -vlog01compat -work work +incdir+F:/UART-transmitter -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R3
+vtop
+2F:/UART-transmitter/top.v
+R2
+!i10b 1
+!s100 4kWW]1f3mC8>3W4U<2Kbo1
+IeKCQomeVS0_9eTmU1O5>i3
+R1
+w1724383358
+8F:/UART-transmitter/top.v
+FF:/UART-transmitter/top.v
+!i122 1
+L0 1 25
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 F:/UART-transmitter/top.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/UART-transmitter|F:/UART-transmitter/top.v|
+!i113 0
+R7
+R8
+R3
+vuart_tx
+2F:/UART-transmitter/uart_tx.v
+R2
+!i10b 1
+!s100 j]^B[`Bd<_KQezi@[l0DG2
+I8N7:<8LLN_Rk7H<FAg^OM2
+R1
+w1724396458
+8F:/UART-transmitter/uart_tx.v
+FF:/UART-transmitter/uart_tx.v
+!i122 0
+L0 1 84
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 F:/UART-transmitter/uart_tx.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/UART-transmitter|F:/UART-transmitter/uart_tx.v|
+!i113 0
+R7
+R8
+R3
